@@ -1,0 +1,24 @@
+﻿@model List<VNR_InsternShip_BuiVanLuat.Entity.KhoaHoc>
+
+@{
+    ViewBag.Title = "KhoaHoc";
+}
+
+<h2>KHOÁ HỌC</h2>
+
+<table class="table">
+    <tr>
+<ul>
+    @foreach (var item in Model)
+            {
+                <li>@Html.ActionLink(item.TenKhoaHoc,"MonHoc", new {IDKhoaHoc = item.ID})</li>
+            }
+        </ul>
+    </tr>
+</table>
+
+<style>
+    .Menutran li {
+        display: inline
+    }
+</style>

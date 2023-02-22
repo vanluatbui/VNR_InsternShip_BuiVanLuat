@@ -1,0 +1,24 @@
+﻿@model List<VNR_InsternShip_BuiVanLuat.Entity.MonHoc>
+
+@{
+    ViewBag.Title = "MonHoc";
+}
+
+<h2>Khoá học : @ViewBag.TenKhoaHoc</h2>
+
+<table class="table">
+    <tr>
+<ol>
+    @foreach (var item in Model)
+            {
+                <li>@item.TenMonHoc</li>
+            }
+        </ol>
+    </tr>
+</table>
+
+<style>
+    .Menutran li {
+        display: inline
+    }
+</style>
